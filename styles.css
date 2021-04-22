@@ -1,0 +1,211 @@
+/* 
+code by - Dhawal (@dhawalRath)
+Date - 22nd April 2021
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --dark: hsl(165, 3%, 31%);
+  --gray-dark: hsl(0, 0%, 66%);
+  --gray-light: hsl(0, 0%, 74%);
+  --gray-light-2: hsl(0, 0%, 90%);
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+}
+
+.container{
+  background-color: white;
+}
+
+.container .wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 41px;
+  margin-bottom: 60px;
+}
+
+.wrapper img{
+  max-width: 156px;
+  max-height: 156px;
+  border-radius: 1rem;
+  margin-bottom: 16px;
+}
+
+.wrapper .profile-name{
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+
+.wrapper .location{
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.wrapper .social-stats{
+  display: flex;
+  justify-content: center;
+}
+
+.social-stats .box{
+  width: 100px;
+  height: 67px;
+  border-radius: 1rem;
+  background-color: var(--gray-light-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-stats .sp-box{
+  margin: 0 24px;
+}
+
+.box .stats-number{
+  font-size: 1.125rem;
+  color: var(--dark);
+}
+
+.box .stats-name{
+  font-size: 0.875rem;
+  color: var(--gray-light);
+}
+
+
+/* image-gallery */
+.grid-container{
+  width: 930px;
+  height: 960px;
+  display: grid;
+  gap: 30px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "img1 img2 img2"
+  "img3 img3 img4"
+  "img6 img5 img4";
+}
+
+.grid-container .img{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.img1{
+  grid-area: img1;
+  background: url('./images/photo1.png') no-repeat center center/cover;
+}
+
+.img2{
+  grid-area: img2;
+  background: url('./images/photo2.png') no-repeat center center/cover;
+}
+
+.img3{
+  grid-area: img3;
+  background: url('./images/photo3.png') no-repeat center center/cover;
+}
+
+.img4{
+  grid-area: img4;
+  background: url('./images/photo4.png')no-repeat center center/cover;
+}
+
+.img5{
+  grid-area: img5;
+  background: url('./images/photo5.png') no-repeat center center/cover;
+}
+
+.img6{
+  grid-area: img6;
+  background: url('./images/photo6.png') no-repeat center center/cover;
+}
+
+
+
+
+/* mobile-version */
+@media(max-width: 960px){
+
+  .container .wrapper{
+    margin-top: 30px;
+  margin-bottom: 30px;
+  }
+
+  .wrapper img{
+    width: 102px;
+    height: 102px;
+    margin-bottom: 11px;
+  }
+
+  .wrapper .profile-name{
+    font-size: 0.875rem;
+  }
+
+  .wrapper .location{
+    font-size: 0.625rem;
+    margin-top: 4px;
+    margin-bottom: 12px;
+  }
+ 
+  .social-stats .box{
+    width: 78px;
+    height: 52px;
+  }
+
+  .box .stats-number{
+    font-size: 0.75rem;
+    color: var(--dark);
+  }
+  
+  .box .stats-name{
+    font-size: 0.75rem;
+    color: var(--gray-light);
+  }
+
+  .grid-container{
+    width: 350px;
+    height: 350px;
+    gap: 10px;
+  }
+
+}
+
+/* footer */
+.footer{
+  grid-area: footer;
+  font-size: 0.875rem;
+  margin: 24px 0;
+  color: var(--gray-dark);
+  display: block;
+  text-align: center;
+}
+
+.footer a{
+  text-decoration: none;
+  color: var(--gray-dark);
+}
+
+.footer a:first-child{
+  font-weight: 700;
+}
+
+.footer a:last-child{
+  font-weight: 600;
+}
