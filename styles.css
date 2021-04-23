@@ -189,7 +189,6 @@ body{
 
 /* footer */
 .footer{
-  grid-area: footer;
   font-size: 0.875rem;
   margin: 24px 0;
   color: var(--gray-dark);
